@@ -55,20 +55,30 @@ export default function Home() {
       </header>
 
       <section className="hero shell" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> Computational materials researcher</p>
-          <h1>Understanding materials.<br /><em>Engineering what’s next.</em></h1>
-          <p className="hero-intro">I’m Sang-Hyeon Park, a computational materials scientist exploring how atoms, interfaces, and data can shape the future of energy materials.</p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#research">Explore my research <Arrow /></a>
-            <a className="button button-quiet" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
-          </div>
+        <div className="hero-heading">
+          <p className="eyebrow"><span /> Computational materials science</p>
+          <h1>Sang-Hyeon Park</h1>
+          <p>Research Officer at Agency for Defense Development, South Korea</p>
         </div>
-        <div className="atom-visual" aria-label="Abstract crystalline lattice illustration">
-          <div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit orbit-three" />
-          <div className="nucleus">Li<span>+</span></div>
-          <i className="node n1" /><i className="node n2" /><i className="node n3" /><i className="node n4" /><i className="node n5" />
-          <p>Atomic-scale insight<br /><b>to device-level impact</b></p>
+        <div className="hero-profile-grid">
+          <div className="hero-bio">
+            <p>I am a <strong>computational materials science researcher</strong> at the Agency for Defense Development. My work combines physics-based simulation and materials informatics to understand and design energy materials across atomic, interfacial, and device scales.</p>
+            <p>My current research focuses on <strong>solid-state batteries and thermal batteries</strong>, with particular interest in:</p>
+            <ol>
+              <li>Interfacial thermodynamics and electrochemical stability in solid-state batteries.</li>
+              <li>Ion transport, defect chemistry, and reaction mechanisms through DFT and molecular dynamics.</li>
+              <li>Machine learning and finite-element analysis for accelerated materials and device design.</li>
+            </ol>
+            <p>I received my <strong>B.S. in Energy Engineering from Hanyang University</strong>, graduating summa cum laude and ranked first in my class. I am preparing to pursue PhD study in the United States and develop predictive, interpretable tools for materials discovery.</p>
+          </div>
+          <aside className="profile-aside">
+            <div className="profile-photo-wrap"><img src="/sang-hyeon-park-profile.jpeg" alt="Portrait of Sang-Hyeon Park" /></div>
+            <div className="profile-links">
+              <a href="https://scholar.google.com/citations?user=5et0cHcAAAAJ&hl=ko" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a>
+              <a href="mailto:ghbond010126@gmail.com">Email <Arrow /></a>
+              <a href="/cv-sang-hyeon-park.pdf" download>CV <span aria-hidden="true">↓</span></a>
+            </div>
+          </aside>
         </div>
         <div className="scroll-cue"><span /> Scroll to discover</div>
       </section>
@@ -115,7 +125,7 @@ export default function Home() {
 
       <section className="cv-band"><div className="shell"><p className="section-index">07 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated July 2026</p></div></section>
 
-      <footer id="contact"><div className="shell footer-main"><p className="section-index">08 / CONTACT</p><div><h2>Let’s explore what<br />we can <em>discover.</em></h2><p>I’m always glad to discuss research ideas, potential collaborations, and PhD opportunities.</p><a className="email" href="mailto:sanghyeon.park@example.com">sanghyeon.park@example.com <Arrow /></a></div><div className="socials"><a href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a></div></div><div className="shell footer-bottom"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
+      <footer id="contact"><div className="shell footer-main"><p className="section-index">08 / CONTACT</p><div><h2>Let’s explore what<br />we can <em>discover.</em></h2><p>I’m always glad to discuss research ideas, potential collaborations, and PhD opportunities.</p><a className="email" href="mailto:ghbond010126@gmail.com">ghbond010126@gmail.com <Arrow /></a></div><div className="socials"><a href="https://scholar.google.com/citations?user=5et0cHcAAAAJ&hl=ko" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div></div><div className="shell footer-bottom"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
     </main>
   );
 }
