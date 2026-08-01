@@ -14,18 +14,18 @@ Placeholder publication, affiliation, email, and social-profile details are inte
 
 ## Local development
 
-Requirements: Node.js 22.13 or newer and npm.
+Requirements: Node.js 22.13 or newer and pnpm.
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open the local URL printed in the terminal. To verify a production build:
 
 ```bash
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 ## Deployment
@@ -34,7 +34,7 @@ The project includes Sites/Cloudflare deployment configuration in `.openai/hosti
 
 1. Push the repository to a Git provider.
 2. Import it into your hosting provider.
-3. Use `npm run build` as the build command.
+3. Use `pnpm build` as the build command.
 4. No environment variables or database setup are required.
 
 Before going live, replace all placeholder content and the placeholder CV.
