@@ -58,18 +58,17 @@ export default function Home() {
         <div className="hero-heading">
           <p className="eyebrow"><span /> Computational materials science</p>
           <h1>Sang-Hyeon Park</h1>
-          <p>Research Officer at Agency for Defense Development, South Korea</p>
+          <p>Prospective Ph.D. Applicant · Research Officer at Agency for Defense Development</p>
         </div>
         <div className="hero-profile-grid">
           <div className="hero-bio">
-            <p>I am a <strong>computational materials science researcher</strong> at the Agency for Defense Development. My work combines physics-based simulation and materials informatics to understand and design energy materials across atomic, interfacial, and device scales.</p>
-            <p>My current research focuses on <strong>solid-state batteries and thermal batteries</strong>, with particular interest in:</p>
+            <p>Sang-Hyeon is a <strong>prospective Ph.D. applicant</strong> and a computational materials science researcher at the <strong>Agency for Defense Development (ADD)</strong>. He is broadly interested in:</p>
             <ol>
-              <li>Interfacial thermodynamics and electrochemical stability in solid-state batteries.</li>
-              <li>Ion transport, defect chemistry, and reaction mechanisms through DFT and molecular dynamics.</li>
-              <li>Machine learning and finite-element analysis for accelerated materials and device design.</li>
+              <li>Advancing computational methods for materials science.</li>
+              <li>Conducting computation-guided experiments and rigorously integrating and validating computational and experimental results.</li>
             </ol>
-            <p>I received my <strong>B.S. in Energy Engineering from Hanyang University</strong>, graduating summa cum laude and ranked first in my class. I am preparing to pursue PhD study in the United States and develop predictive, interpretable tools for materials discovery.</p>
+            <p>Sang-Hyeon received his <strong>B.S. in Energy Engineering (Summa Cum Laude)</strong> from Hanyang University in 2024. Following graduation, he has served as a <strong>Research Officer for National Defense (ROND; First Lieutenant, Republic of Korea Army)</strong> and a researcher at the Defense Materials and Energy Technology Center at ADD. His work focuses on uncovering structure–property relationships in energy-storage materials through atomistic simulation and materials informatics, and on translating those insights into the design of electrodes and electrolytes for reserve thermal batteries.</p>
+            <p>He expects to complete his military service in <strong>May 2027</strong> and plans to begin a Ph.D. program in <strong>Fall 2027</strong>.</p>
           </div>
           <aside className="profile-aside">
             <div className="profile-photo-wrap"><img src="/sang-hyeon-park-profile.jpeg" alt="Portrait of Sang-Hyeon Park" /></div>
