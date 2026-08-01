@@ -35,6 +35,8 @@ code{font-size:.92em;background:rgba(255,255,255,.09);padding:2px 4px}
 .hero-bio{font-size:15px;line-height:1.72;color:#405450}
 .hero-bio p{margin:0 0 16px}
 .hero-bio strong{color:var(--ink);font-weight:720}
+.inline-academic-link{color:var(--ink);border-bottom:1px solid rgba(16,44,40,.42);transition:color .2s,border-color .2s}
+.inline-academic-link:hover{color:#287d65;border-color:#287d65}
 .hero-bio ol{margin:2px 0 20px;padding-left:24px;color:var(--ink)}
 .hero-bio li{padding-left:5px;margin:5px 0;font-weight:620}
 .profile-aside{justify-self:end;width:100%}

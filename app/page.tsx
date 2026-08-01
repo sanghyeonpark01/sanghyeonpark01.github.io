@@ -62,12 +62,12 @@ export default function Home() {
         </div>
         <div className="hero-profile-grid">
           <div className="hero-bio">
-            <p>Sang-Hyeon is a <strong>prospective Ph.D. applicant</strong> and a computational materials science researcher at the <strong>Agency for Defense Development (ADD)</strong>. He is broadly interested in:</p>
+            <p>Sang-Hyeon is a <strong>prospective Ph.D. applicant</strong> and a computational materials science researcher at the <strong><a className="inline-academic-link" href="https://add.re.kr/eps" target="_blank" rel="noreferrer">Agency for Defense Development (ADD)</a></strong>. He is broadly interested in:</p>
             <ol>
               <li>Advancing computational methods for materials science.</li>
               <li>Conducting computation-guided experiments and rigorously integrating and validating computational and experimental results.</li>
             </ol>
-            <p>Sang-Hyeon received his <strong>B.S. in Energy Engineering (Summa Cum Laude)</strong> from Hanyang University in 2024. Following graduation, he has served as a <strong>Research Officer for National Defense (ROND; First Lieutenant, Republic of Korea Army)</strong> and a researcher at the Defense Materials and Energy Technology Center at ADD. His work focuses on uncovering structure–property relationships in energy-storage materials through atomistic simulation and materials informatics, and on translating those insights into the design of electrodes and electrolytes for reserve thermal batteries.</p>
+            <p>Sang-Hyeon received his <strong>B.S. in Energy Engineering (Summa Cum Laude)</strong> from <a className="inline-academic-link" href="https://www.hanyang.ac.kr/web/eng" target="_blank" rel="noreferrer">Hanyang University</a> in 2024. Following graduation, he has served as a <strong><a className="inline-academic-link" href="https://www.rond.or.kr/" target="_blank" rel="noreferrer">Research Officer for National Defense (ROND; First Lieutenant, Republic of Korea Army)</a></strong> and a researcher at the Defense Materials and Energy Technology Center at <a className="inline-academic-link" href="https://add.re.kr/eps" target="_blank" rel="noreferrer">ADD</a>. His work focuses on uncovering structure–property relationships in energy-storage materials through atomistic simulation and materials informatics, and on translating those insights into the design of electrodes and electrolytes for reserve thermal batteries.</p>
             <p>He expects to complete his military service in <strong>May 2027</strong> and plans to begin a Ph.D. program in <strong>Fall 2027</strong>.</p>
           </div>
           <aside className="profile-aside">
