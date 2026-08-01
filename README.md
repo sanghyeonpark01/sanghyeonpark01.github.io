@@ -8,7 +8,7 @@ A responsive single-page academic portfolio for a computational materials scienc
 - Research projects: `data/projects.ts`
 - Biography, experience, skills, and contact links: `app/page.tsx`
 - Colors, spacing, and responsive styles: `app/globals.css`
-- Replace `public/cv-sang-hyeon-park.pdf` with the final CV, keeping the filename unchanged.
+- CV download: `public/cv-sang-hyeon-park.pdf`
 
 Placeholder publication, affiliation, email, and social-profile details are intentionally labeled or use example destinations. Replace them before publishing.
 
@@ -37,4 +37,4 @@ The project includes Sites/Cloudflare deployment configuration in `.openai/hosti
 3. Use `pnpm build` as the build command.
 4. No environment variables or database setup are required.
 
-Before going live, replace all placeholder content and the placeholder CV.
+Before going live, replace all remaining placeholder profile content.
