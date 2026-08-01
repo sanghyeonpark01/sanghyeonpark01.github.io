@@ -1,0 +1,121 @@
+import { projects } from "@/data/projects";
+import { publications } from "@/data/publications";
+
+const interests = [
+  ["01", "Computational materials science", "Connecting atomistic mechanisms with continuum-scale performance."],
+  ["02", "Solid-state batteries", "Designing safer, high-energy storage through predictive simulation."],
+  ["03", "Electrochemical interfaces", "Understanding transport, stability, and reaction pathways at buried interfaces."],
+  ["04", "Machine learning for materials", "Accelerating screening and extracting physical insight from complex data."],
+  ["05", "Density functional theory", "Resolving electronic structure and thermodynamic stability from first principles."],
+  ["06", "Molecular dynamics", "Following dynamical processes across time and temperature scales."],
+  ["07", "Finite-element thermal analysis", "Modeling heat generation and transport in electrochemical devices."],
+];
+
+const experience = [
+  {
+    period: "2025 — Present",
+    role: "Undergraduate Researcher",
+    group: "Computational Materials Laboratory · University Placeholder",
+    copy: "Investigating ion transport and interfacial stability in solid electrolytes using first-principles calculations and molecular dynamics.",
+    tags: ["DFT", "Solid electrolytes", "Python"],
+  },
+  {
+    period: "2024 — 2025",
+    role: "Research Intern",
+    group: "Energy Materials Group · Institute Placeholder",
+    copy: "Developed a finite-element workflow to study coupled heat transfer and electrochemical behavior in next-generation battery cells.",
+    tags: ["COMSOL", "Thermal analysis", "Batteries"],
+  },
+];
+
+const skills = [
+  ["Simulation", "VASP · Quantum ESPRESSO · LAMMPS · COMSOL"],
+  ["Programming", "Python · MATLAB · Bash · TypeScript"],
+  ["Data & ML", "NumPy · pandas · scikit-learn · PyTorch"],
+  ["Methods", "DFT · MD · FEM · Statistical analysis"],
+  ["Tools", "Git · Linux · HPC · LaTeX"],
+];
+
+function Arrow() {
+  return <span aria-hidden="true">↗</span>;
+}
+
+export default function Home() {
+  return (
+    <main>
+      <header className="site-header">
+        <a className="wordmark" href="#top" aria-label="Sang-Hyeon Park, home">SHP<span>.</span></a>
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+        </nav>
+        <a className="contact-link" href="#contact">Get in touch <Arrow /></a>
+      </header>
+
+      <section className="hero shell" id="top">
+        <div className="hero-copy">
+          <p className="eyebrow"><span /> Computational materials researcher</p>
+          <h1>Understanding materials.<br /><em>Engineering what’s next.</em></h1>
+          <p className="hero-intro">I’m Sang-Hyeon Park, a computational materials scientist exploring how atoms, interfaces, and data can shape the future of energy materials.</p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#research">Explore my research <Arrow /></a>
+            <a className="button button-quiet" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div className="atom-visual" aria-label="Abstract crystalline lattice illustration">
+          <div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit orbit-three" />
+          <div className="nucleus">Li<span>+</span></div>
+          <i className="node n1" /><i className="node n2" /><i className="node n3" /><i className="node n4" /><i className="node n5" />
+          <p>Atomic-scale insight<br /><b>to device-level impact</b></p>
+        </div>
+        <div className="scroll-cue"><span /> Scroll to discover</div>
+      </section>
+
+      <section className="section shell about-grid" id="about">
+        <div><p className="section-index">01 / ABOUT</p><h2>Curious about<br />what happens <em>between<br />the atoms.</em></h2></div>
+        <div className="about-copy">
+          <p className="lead">My work lives at the intersection of physics, chemistry, and computation.</p>
+          <p>I use multiscale modeling to reveal how microscopic mechanisms govern macroscopic behavior in energy materials. I’m especially interested in solid-state batteries and the complex interfaces that determine their performance.</p>
+          <p>Currently preparing for PhD study in the United States, I hope to develop predictive tools that make materials discovery faster, more interpretable, and more sustainable.</p>
+          <dl><div><dt>Current focus</dt><dd>Solid-state battery interfaces</dd></div><div><dt>Based in</dt><dd>Seoul, South Korea</dd></div><div><dt>Open to</dt><dd>PhD opportunities · Fall 2027</dd></div></dl>
+        </div>
+      </section>
+
+      <section className="section section-tint" id="research">
+        <div className="shell">
+          <div className="section-heading"><div><p className="section-index">02 / RESEARCH INTERESTS</p><h2>Questions I’m<br /><em>driven to answer.</em></h2></div><p>From electrons to engineered systems, I combine physics-based simulation with data-driven methods.</p></div>
+          <div className="interest-grid">
+            {interests.map(([number, title, copy]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section shell" id="experience">
+        <p className="section-index">03 / RESEARCH EXPERIENCE</p>
+        <div className="experience-layout"><h2>Learning by<br /><em>doing the work.</em></h2><div className="timeline">
+          {experience.map((item) => <article key={item.period}><time>{item.period}</time><div><h3>{item.role}</h3><h4>{item.group}</h4><p>{item.copy}</p><ul>{item.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div></article>)}
+        </div></div>
+      </section>
+
+      <section className="section publication-section" id="publications">
+        <div className="shell">
+          <div className="section-heading light"><div><p className="section-index">04 / SELECTED PUBLICATIONS</p><h2>Selected <em>work.</em></h2></div><p>Placeholder entries — replace these in <code>data/publications.ts</code>.</p></div>
+          <div className="publication-list">{publications.map((pub, index) => <article key={pub.title}><span>0{index + 1}</span><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p>{pub.authors}</p><p className="venue">{pub.venue}</p></div><a href={pub.href} aria-label={`View ${pub.title}`}><Arrow /></a></article>)}</div>
+        </div>
+      </section>
+
+      <section className="section shell" id="projects">
+        <div className="section-heading"><div><p className="section-index">05 / RESEARCH PROJECTS</p><h2>Methods in<br /><em>motion.</em></h2></div><p>Selected computational studies spanning atomic, molecular, and device scales.</p></div>
+        <div className="project-grid">{projects.map((project, index) => <article key={project.title} className={`project-card project-${index + 1}`}><div className="project-art"><span>{project.symbol}</span><i /><i /></div><div className="project-body"><p>{project.category} · {project.year}</p><h3>{project.title}</h3><p>{project.description}</p><ul>{project.tools.map(tool => <li key={tool}>{tool}</li>)}</ul></div></article>)}</div>
+      </section>
+
+      <section className="section section-tint" id="skills"><div className="shell skills-layout"><div><p className="section-index">06 / TECHNICAL SKILLS</p><h2>The tools behind<br /><em>the questions.</em></h2><p>Comfortable moving between theory, code, high-performance computing, and scientific communication.</p></div><div className="skill-list">{skills.map(([label, values]) => <div key={label}><h3>{label}</h3><p>{values}</p></div>)}</div></div></section>
+
+      <section className="cv-band"><div className="shell"><p className="section-index">07 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · Placeholder CV<br />Last updated August 2026</p></div></section>
+
+      <footer id="contact"><div className="shell footer-main"><p className="section-index">08 / CONTACT</p><div><h2>Let’s explore what<br />we can <em>discover.</em></h2><p>I’m always glad to discuss research ideas, potential collaborations, and PhD opportunities.</p><a className="email" href="mailto:sanghyeon.park@example.com">sanghyeon.park@example.com <Arrow /></a></div><div className="socials"><a href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a></div></div><div className="shell footer-bottom"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
+    </main>
+  );
+}
