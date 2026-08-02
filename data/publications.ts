@@ -1,10 +1,10 @@
 export type Publication = {
   title: string;
   authors: string;
-  venue: string;
+  venue?: string;
   year: number;
   status: string;
-  href: string;
+  href?: string;
   image: string;
   imageAlt: string;
 };
@@ -51,3 +51,40 @@ export const publications: Publication[] = [
     imageAlt: "High-temperature discharge performance comparison of tantalum- and gallium-doped LLZO thermal batteries",
   },
 ];
+
+export const preprints: Publication[] = [
+  {
+    title: "Stabilizing Interfaces in Magnesium Solid-State Batteries via High-throughput Coating Design",
+    authors: "Sang-Hyeon Park*, Changseong Youn, June-Ho Lim, Gyeongbeom Kim, Yusong Choi, Hyun-Ki Yoon, and Jongseo Lee*",
+    year: 2026,
+    status: "Under review",
+    image: "/publications/preprint-park-magnesium-interfaces.png",
+    imageAlt: "Electrochemical stability windows of representative magnesium solid electrolytes",
+  },
+  {
+    title: "Transferable descriptor-guided interfacial thermodynamics and electrochemical stability for stable solid-state alkali battery interfaces",
+    authors: "Sang-Hyeon Park, Hyunjin Won, Sanghwi Han, Hyun-Ki Yoon, and Jongseo Lee*",
+    year: 2026,
+    status: "Under review",
+    image: "/publications/preprint-park-transferable-interfaces.png",
+    imageAlt: "Workflow and screening map for stable solid-state alkali battery interfaces",
+  },
+  {
+    title: "Reaction-Controlled Fluorination of FeS₂ Cathodes via FeF₃ Surface Layer Formation for High-Voltage Thermal Batteries",
+    authors: "Hye-Ryeon Yu, In Woo Lee, Tae-Young Ahn, Wonjun Ahn, Sang-Hyeon Park, Chae Nam Im, Hyun-Ki Yoon, Yusong Choi, and Youngseak Lee*",
+    year: 2026,
+    status: "Under review",
+    image: "/publications/preprint-yu-fluorinated-fes2.png",
+    imageAlt: "Microscopy and diffraction images of a fluorinated iron disulfide cathode surface layer",
+  },
+  {
+    title: "Approaching Intrinsic High-Temperature Performance in Garnet-Type Solid Electrolyte (LLZTO): Microstructure and Surface-Chemistry Engineering for Advanced Salt-free Thermal Batteries",
+    authors: "June-Ho Lim, Sang-Hyeon Park, Changseong Youn, Tae-Young Ahn, Heesook Roh, Hyun-Ki Yoon, and Jongseo Lee*",
+    year: 2026,
+    status: "Under review",
+    image: "/publications/preprint-lim-llzto.png",
+    imageAlt: "Conceptual comparison of molten-salt, solid-electrolyte, and optimized solid-electrolyte thermal batteries",
+  },
+];
+
+export const manuscriptsInPreparation: Publication[] = [];

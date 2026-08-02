@@ -70,3 +70,8 @@ code{font-size:.92em;background:rgba(255,255,255,.09);padding:2px 4px}
   .hero-bio li{padding-left:2px;margin:8px 0}
   .hero .scroll-cue{display:none}
 }
+
+.publication-group{margin-top:72px}
+.publication-group>h3{font-family:var(--font-serif);font-size:clamp(28px,3.2vw,42px);font-weight:400;margin:0 0 22px;color:#eef5ef}
+.publication-empty{border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2);padding:34px 0;margin:0;color:#9eb3ae;font-size:13px}
+.publication-action-placeholder{display:block}

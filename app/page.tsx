@@ -1,5 +1,5 @@
 import { projects } from "@/data/projects";
-import { publications } from "@/data/publications";
+import { manuscriptsInPreparation, preprints, publications, type Publication } from "@/data/publications";
 
 const interests = [
   ["01", "Computational materials science", "Connecting atomistic mechanisms with continuum-scale performance."],
@@ -43,6 +43,10 @@ function Arrow() {
 function HighlightedAuthors({ authors }: { authors: string }) {
   const parts = authors.split("Sang-Hyeon Park");
   return <>{parts.map((part, index) => <span key={`${part}-${index}`}>{part}{index < parts.length - 1 && <mark className="author-highlight">Sang-Hyeon Park</mark>}</span>)}</>;
+}
+
+function PublicationList({ items }: { items: Publication[] }) {
+  return <div className="publication-list">{items.map((pub, index) => <article key={pub.title}><span>{String(index + 1).padStart(2, "0")}</span><div className="publication-image"><img src={pub.image} alt={pub.imageAlt} /></div><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p><HighlightedAuthors authors={pub.authors} /></p>{pub.venue && <p className="venue">{pub.venue}</p>}</div>{pub.href ? <a href={pub.href} target="_blank" rel="noreferrer" aria-label={`View ${pub.title}`}><Arrow /></a> : <span className="publication-action-placeholder" aria-hidden="true" />}</article>)}</div>;
 }
 
 export default function Home() {
@@ -115,8 +119,10 @@ export default function Home() {
 
       <section className="section publication-section" id="publications">
         <div className="shell">
-          <div className="section-heading light"><div><p className="section-index">04 / SELECTED PUBLICATIONS</p><h2>Selected <em>work.</em></h2></div><div className="publication-intro"><p>Peer-reviewed research on computational materials design and next-generation battery materials.</p><p className="author-legend"><span>† Equal contribution</span><span>* Corresponding author</span></p></div></div>
-          <div className="publication-list">{publications.map((pub, index) => <article key={pub.title}><span>0{index + 1}</span><div className="publication-image"><img src={pub.image} alt={pub.imageAlt} /></div><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p><HighlightedAuthors authors={pub.authors} /></p><p className="venue">{pub.venue}</p></div><a href={pub.href} target="_blank" rel="noreferrer" aria-label={`View ${pub.title}`}><Arrow /></a></article>)}</div>
+          <div className="section-heading light"><div><p className="section-index">04 / RESEARCH OUTPUTS</p><h2>Selected <em>work.</em></h2></div><div className="publication-intro"><p>Published work and ongoing research on computational materials design and next-generation battery materials.</p><p className="author-legend"><span>† Equal contribution</span><span>* Corresponding author</span></p></div></div>
+          <section className="publication-group" aria-labelledby="published-heading"><h3 id="published-heading">4.1. Publications</h3><PublicationList items={publications} /></section>
+          <section className="publication-group" aria-labelledby="preprints-heading"><h3 id="preprints-heading">4.2. Preprints under review</h3><PublicationList items={preprints} /></section>
+          <section className="publication-group" aria-labelledby="manuscripts-heading"><h3 id="manuscripts-heading">4.3. Manuscript in preparation</h3>{manuscriptsInPreparation.length > 0 ? <PublicationList items={manuscriptsInPreparation} /> : <p className="publication-empty">Details forthcoming.</p>}</section>
         </div>
       </section>
 
