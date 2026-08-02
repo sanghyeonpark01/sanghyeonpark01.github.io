@@ -110,8 +110,8 @@ export default function Home() {
 
       <section className="section publication-section" id="publications">
         <div className="shell">
-          <div className="section-heading light"><div><p className="section-index">04 / SELECTED PUBLICATIONS</p><h2>Selected <em>work.</em></h2></div><p>Placeholder entries — replace these in <code>data/publications.ts</code>.</p></div>
-          <div className="publication-list">{publications.map((pub, index) => <article key={pub.title}><span>0{index + 1}</span><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p>{pub.authors}</p><p className="venue">{pub.venue}</p></div><a href={pub.href} aria-label={`View ${pub.title}`}><Arrow /></a></article>)}</div>
+          <div className="section-heading light"><div><p className="section-index">04 / SELECTED PUBLICATIONS</p><h2>Selected <em>work.</em></h2></div><p>Open an abstract for a concise overview, or follow the DOI to view the published article.</p></div>
+          <div className="publication-list">{publications.map((pub, index) => <article key={pub.title}><span>{String(index + 1).padStart(2, "0")}</span><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p>{pub.authors}</p>{pub.venue && <p className="venue">{pub.venue}</p>}<details className="publication-abstract"><summary><span className="summary-open">See abstract</span><span className="summary-close">Close abstract</span></summary><p>{pub.abstract}</p></details></div>{pub.href ? <a href={pub.href} target="_blank" rel="noreferrer" aria-label={`View ${pub.title}`}><Arrow /></a> : <span className="publication-spacer" aria-hidden="true" />}</article>)}</div>
         </div>
       </section>
 
