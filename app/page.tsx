@@ -1,4 +1,3 @@
-import { projects } from "@/data/projects";
 import { manuscriptsInPreparation, preprints, publications, type Publication } from "@/data/publications";
 
 const interests = [
@@ -56,9 +55,9 @@ export default function Home() {
         <a className="wordmark" href="#top" aria-label="Sang-Hyeon Park, home">SHP<span>.</span></a>
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#projects">Projects</a>
+          <a href="#publications">Selected Work</a>
+          <a href="#research">Interests</a>
+          <a href="#experience">Experience</a>
         </nav>
         <a className="contact-link" href="#contact">Get in touch <Arrow /></a>
       </header>
@@ -101,9 +100,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section publication-section" id="publications">
+        <div className="shell">
+          <div className="section-heading light"><div><p className="section-index">02 / SELECTED WORK</p><h2>Selected <em>work.</em></h2></div><div className="publication-intro"><p>Published work and ongoing research on computational materials design and next-generation battery materials.</p><p className="author-legend"><span>† Equal contribution</span><span>* Corresponding author</span></p></div></div>
+          <section className="publication-group" aria-labelledby="published-heading"><h3 id="published-heading">2.1. Publications</h3><PublicationList items={publications} /></section>
+          <section className="publication-group" aria-labelledby="preprints-heading"><h3 id="preprints-heading">2.2. Preprints under review</h3><PublicationList items={preprints} /></section>
+          <section className="publication-group" aria-labelledby="manuscripts-heading"><h3 id="manuscripts-heading">2.3. Manuscript in preparation</h3>{manuscriptsInPreparation.length > 0 ? <PublicationList items={manuscriptsInPreparation} /> : <p className="publication-empty">Details forthcoming.</p>}</section>
+        </div>
+      </section>
+
       <section className="section section-tint" id="research">
         <div className="shell">
-          <div className="section-heading"><div><p className="section-index">02 / RESEARCH INTERESTS</p><h2>Questions I’m<br /><em>driven to answer.</em></h2></div><p>From electrons to engineered systems, I combine physics-based simulation with data-driven methods.</p></div>
+          <div className="section-heading"><div><p className="section-index">03 / RESEARCH INTERESTS</p><h2>Questions I’m<br /><em>driven to answer.</em></h2></div><p>From electrons to engineered systems, I combine physics-based simulation with data-driven methods.</p></div>
           <div className="interest-grid">
             {interests.map(([number, title, copy]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}
           </div>
@@ -111,29 +119,15 @@ export default function Home() {
       </section>
 
       <section className="section shell" id="experience">
-        <p className="section-index">03 / RESEARCH EXPERIENCE</p>
+        <p className="section-index">04 / RESEARCH EXPERIENCE</p>
         <div className="experience-layout"><h2>Learning by<br /><em>doing the work.</em></h2><div className="timeline">
           {experience.map((item) => <article key={item.period}><time>{item.period}</time><div><h3>{item.role}</h3><h4>{item.group}</h4><p>{item.copy}</p><ul>{item.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div></article>)}
         </div></div>
       </section>
 
-      <section className="section publication-section" id="publications">
-        <div className="shell">
-          <div className="section-heading light"><div><p className="section-index">04 / RESEARCH OUTPUTS</p><h2>Selected <em>work.</em></h2></div><div className="publication-intro"><p>Published work and ongoing research on computational materials design and next-generation battery materials.</p><p className="author-legend"><span>† Equal contribution</span><span>* Corresponding author</span></p></div></div>
-          <section className="publication-group" aria-labelledby="published-heading"><h3 id="published-heading">4.1. Publications</h3><PublicationList items={publications} /></section>
-          <section className="publication-group" aria-labelledby="preprints-heading"><h3 id="preprints-heading">4.2. Preprints under review</h3><PublicationList items={preprints} /></section>
-          <section className="publication-group" aria-labelledby="manuscripts-heading"><h3 id="manuscripts-heading">4.3. Manuscript in preparation</h3>{manuscriptsInPreparation.length > 0 ? <PublicationList items={manuscriptsInPreparation} /> : <p className="publication-empty">Details forthcoming.</p>}</section>
-        </div>
-      </section>
-
-      <section className="section shell" id="projects">
-        <div className="section-heading"><div><p className="section-index">05 / RESEARCH PROJECTS</p><h2>Methods in<br /><em>motion.</em></h2></div><p>Selected computational studies spanning atomic, molecular, and device scales.</p></div>
-        <div className="project-grid">{projects.map((project, index) => <article key={project.title} className={`project-card project-${index + 1}`}><div className="project-art"><span>{project.symbol}</span><i /><i /></div><div className="project-body"><p>{project.category} · {project.year}</p><h3>{project.title}</h3><p>{project.description}</p><ul>{project.tools.map(tool => <li key={tool}>{tool}</li>)}</ul></div></article>)}</div>
-      </section>
+      <section className="cv-band"><div className="shell"><p className="section-index">05 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated July 2026</p></div></section>
 
       <section className="section section-tint" id="skills"><div className="shell skills-layout"><div><p className="section-index">06 / TECHNICAL SKILLS</p><h2>The tools behind<br /><em>the questions.</em></h2><p>Comfortable moving between theory, code, high-performance computing, and scientific communication.</p></div><div className="skill-list">{skills.map(([label, values]) => <div key={label}><h3>{label}</h3><p>{values}</p></div>)}</div></div></section>
-
-      <section className="cv-band"><div className="shell"><p className="section-index">07 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated July 2026</p></div></section>
 
       <footer id="contact"><div className="shell footer-main"><p className="section-index">08 / CONTACT</p><div><h2>Let’s explore what<br />we can <em>discover.</em></h2><p>I’m always glad to discuss research ideas, potential collaborations, and PhD opportunities.</p><a className="email" href="mailto:ghbond010126@gmail.com">ghbond010126@gmail.com <Arrow /></a></div><div className="socials"><a href="https://scholar.google.com/citations?user=5et0cHcAAAAJ&hl=ko" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div></div><div className="shell footer-bottom"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
     </main>
