@@ -56,7 +56,7 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <div className="hero-heading">
-          <p className="eyebrow"><span /> Computational materials science</p>
+          <p className="eyebrow"><span /> <a href="mailto:ghbond010126@gmail.com">ghbond010126@gmail.com</a></p>
           <h1>Sang-Hyeon Park</h1>
           <p>Prospective Ph.D. Applicant · Research Officer at Agency for Defense Development</p>
         </div>
