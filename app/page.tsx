@@ -110,8 +110,8 @@ export default function Home() {
 
       <section className="section publication-section" id="publications">
         <div className="shell">
-          <div className="section-heading light"><div><p className="section-index">04 / SELECTED PUBLICATIONS</p><h2>Selected <em>work.</em></h2></div><p>Placeholder entries — replace these in <code>data/publications.ts</code>.</p></div>
-          <div className="publication-list">{publications.map((pub, index) => <article key={pub.title}><span>0{index + 1}</span><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p>{pub.authors}</p><p className="venue">{pub.venue}</p></div><a href={pub.href} aria-label={`View ${pub.title}`}><Arrow /></a></article>)}</div>
+          <div className="section-heading light"><div><p className="section-index">04 / SELECTED PUBLICATIONS</p><h2>Selected <em>work.</em></h2></div><p>Peer-reviewed research on computational materials design and next-generation battery materials.</p></div>
+          <div className="publication-list">{publications.map((pub, index) => <article key={pub.title}><span>0{index + 1}</span><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p>{pub.authors}</p><p className="venue">{pub.venue}</p></div><a href={pub.href} target="_blank" rel="noreferrer" aria-label={`View ${pub.title}`}><Arrow /></a></article>)}</div>
         </div>
       </section>
 

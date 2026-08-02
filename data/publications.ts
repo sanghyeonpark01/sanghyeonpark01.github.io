@@ -1,8 +1,20 @@
 export type Publication = { title: string; authors: string; venue: string; year: number; status: string; href: string };
 
-// Replace these placeholders with your real publications. New entries appear automatically.
 export const publications: Publication[] = [
-  { title: "Atomistic origins of interfacial resistance in lithium solid electrolytes", authors: "S.-H. Park, Collaborator A, Advisor B", venue: "Journal of Materials Chemistry A (placeholder)", year: 2026, status: "Manuscript in preparation", href: "#" },
-  { title: "A multiscale framework for thermal transport in all-solid-state batteries", authors: "S.-H. Park, Collaborator C", venue: "Electrochimica Acta (placeholder)", year: 2025, status: "Conference abstract", href: "#" },
-  { title: "Machine-learned descriptors for fast ionic conductor screening", authors: "S.-H. Park, Collaborator D, Advisor B", venue: "Materials Research Society Meeting (placeholder)", year: 2025, status: "Poster", href: "#" },
+  {
+    title: "Data-driven design strategies for chemically stabilizing cathode–coating interfaces employing interpretable machine learning",
+    authors: "Sang-Hyeon Park, Donghee Kang, Hyun-Ki Yoon, Yusong Choi, and Jongseo Lee",
+    venue: "Journal of Materials Chemistry A",
+    year: 2026,
+    status: "Paper",
+    href: "https://doi.org/10.1039/D6TA02648F",
+  },
+  {
+    title: "First-Principles Insights into the Role of 3d Transition-Metal Substituents in Intercalating LiₓFeF₃ Cathode Materials for Lithium-Ion Batteries",
+    authors: "Sang-Hyeon Park, June-Ho Lim, Tae-Young Ahn, Hyun-Ki Yoon, Jongseo Lee, and Heesook Roh",
+    venue: "ACS Applied Energy Materials, 8, 14712–14724",
+    year: 2025,
+    status: "Article",
+    href: "https://doi.org/10.1021/acsaem.5c02473",
+  },
 ];
