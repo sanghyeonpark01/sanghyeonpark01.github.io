@@ -27,14 +27,6 @@ const experience = [
   },
 ];
 
-const skills = [
-  ["Simulation", "VASP · Quantum ESPRESSO · LAMMPS · COMSOL"],
-  ["Programming", "Python · MATLAB · Bash · TypeScript"],
-  ["Data & ML", "NumPy · pandas · scikit-learn · PyTorch"],
-  ["Methods", "DFT · MD · FEM · Statistical analysis"],
-  ["Tools", "Git · Linux · HPC · LaTeX"],
-];
-
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -128,7 +120,7 @@ export default function Home() {
 
       <section className="cv-band"><div className="shell"><p className="section-index">05 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated July 2026</p></div></section>
 
-      <section className="section section-tint" id="skills"><div className="shell skills-layout"><div><p className="section-index">06 / TECHNICAL SKILLS</p><h2>The tools behind<br /><em>the questions.</em></h2><p>Comfortable moving between theory, code, high-performance computing, and scientific communication.</p></div><div className="skill-list">{skills.map(([label, values]) => <div key={label}><h3>{label}</h3><p>{values}</p></div>)}</div></div></section>
+      <section className="section section-tint" id="activities"><div className="shell"><p className="section-index">06 / OTHER ACTIVITIES</p><h2>Life beyond<br /><em>research.</em></h2></div></section>
 
       <footer id="contact"><div className="shell footer-main"><p className="section-index">08 / CONTACT</p><div><h2>Let’s explore what<br />we can <em>discover.</em></h2><p>I’m always glad to discuss research ideas, potential collaborations, and PhD opportunities.</p><a className="email" href="mailto:ghbond010126@gmail.com">ghbond010126@gmail.com <Arrow /></a></div><div className="socials"><a href="https://scholar.google.com/citations?user=5et0cHcAAAAJ&hl=ko" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div></div><div className="shell footer-bottom"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
     </main>
