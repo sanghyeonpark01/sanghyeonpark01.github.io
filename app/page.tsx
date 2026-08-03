@@ -1,4 +1,4 @@
-import { manuscriptsInPreparation, preprints, publications, type Publication } from "@/data/publications";
+import { conferencePresentations, manuscriptsInPreparation, preprints, publications, type Publication } from "@/data/publications";
 
 const interests = [
   ["01", "Computational materials science", "Connecting atomistic mechanisms with continuum-scale performance."],
@@ -99,6 +99,19 @@ export default function Home() {
           <section className="publication-group" aria-labelledby="published-heading"><h3 id="published-heading">2.1. Publications</h3><PublicationList items={publications} /></section>
           <section className="publication-group" aria-labelledby="preprints-heading"><h3 id="preprints-heading">2.2. Preprints under review</h3><PublicationList items={preprints} /></section>
           <section className="publication-group" aria-labelledby="manuscripts-heading"><h3 id="manuscripts-heading">2.3. Manuscript in preparation</h3>{manuscriptsInPreparation.length > 0 ? <PublicationList items={manuscriptsInPreparation} /> : <p className="publication-empty">Details forthcoming.</p>}</section>
+          <section className="publication-group" aria-labelledby="conference-heading">
+            <h3 id="conference-heading">2.4. Conference presentations</h3>
+            <div className="conference-list">
+              {conferencePresentations.map((presentation, index) => <article key={presentation.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <p className="conference-kind">({presentation.type})</p>
+                  <h4>{presentation.title}</h4>
+                  <p>{presentation.conference} · {presentation.year}</p>
+                </div>
+              </article>)}
+            </div>
+          </section>
         </div>
       </section>
 

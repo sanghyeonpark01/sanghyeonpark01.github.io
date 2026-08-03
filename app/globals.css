@@ -76,3 +76,10 @@ code{font-size:.92em;background:rgba(255,255,255,.09);padding:2px 4px}
 .publication-group>h3{font-family:var(--font-serif);font-size:clamp(28px,3.2vw,42px);font-weight:400;margin:0 0 22px;color:#eef5ef}
 .publication-empty{border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2);padding:34px 0;margin:0;color:#9eb3ae;font-size:13px}
 .publication-action-placeholder{display:block}
+.conference-list{border-top:1px solid rgba(255,255,255,.2)}
+.conference-list article{display:grid;grid-template-columns:50px 1fr;gap:28px;padding:29px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.conference-list article>span{padding-top:5px;font-size:11px;color:var(--mint)}
+.conference-list h4{max-width:900px;margin:4px 0 10px;font-family:var(--font-serif);font-size:clamp(21px,2.3vw,28px);font-weight:400;line-height:1.25}
+.conference-list p{margin:0;color:#aabbb7;font-size:12px;line-height:1.55}
+.conference-list .conference-kind{color:var(--lime);font-size:10px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:620px){.conference-list article{grid-template-columns:32px 1fr;gap:12px;padding:25px 0}.conference-list h4{font-size:21px}}

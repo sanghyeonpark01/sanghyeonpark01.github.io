@@ -10,6 +10,13 @@ export type Publication = {
   abstract?: string;
 };
 
+export type ConferencePresentation = {
+  type: "Poster" | "Oral";
+  title: string;
+  conference: string;
+  year: number;
+};
+
 export const publications: Publication[] = [
   {
     title: "Data-driven design strategies for chemically stabilizing cathode–coating interfaces employing interpretable machine learning",
@@ -120,5 +127,20 @@ export const manuscriptsInPreparation: Publication[] = [
     status: "Manuscript in preparation",
     image: "/publications/manuscript-collision-integrity-fem.png",
     imageAlt: "Finite-element impact simulation and deceleration response of stacked thermal battery cells",
+  },
+];
+
+export const conferencePresentations: ConferencePresentation[] = [
+  {
+    type: "Oral",
+    title: "Data-driven Evaluation of Interfacial Stability in Batteries: From First-Principles to Military Applications",
+    conference: "Korean Institute of Military Science and Technology Spring Meeting",
+    year: 2026,
+  },
+  {
+    type: "Poster",
+    title: "First-principles Investigated Transition Metal Substitution into LiₓFeF₃",
+    conference: "Korean Ceramic Society Spring Meeting",
+    year: 2025,
   },
 ];
