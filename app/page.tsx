@@ -12,18 +12,18 @@ const interests = [
 
 const experience = [
   {
-    period: "2025 — Present",
-    role: "Undergraduate Researcher",
-    group: "Computational Materials Laboratory · University Placeholder",
-    copy: "Investigating ion transport and interfacial stability in solid electrolytes using first-principles calculations and molecular dynamics.",
-    tags: ["DFT", "Solid electrolytes", "Python"],
+    period: "June 2024 — Present",
+    role: "Research Officer for National Defense",
+    group: "Agency for Defense Development (ADD) · Daejeon, South Korea",
+    copy: "Selected as a Research Officer for National Defense after graduation, I have fulfilled my military service by contributing to the development of defense energy materials. My primary work supports the research and development of reserve thermal batteries for military energy storage and power systems, including the conceptual design and experimental validation of high-voltage, low-melting-point thermal batteries. In parallel, I have independently expanded my expertise beyond energy-materials experiments by developing proficiency in DFT, molecular dynamics, machine learning, and finite-element modeling, with a continuing focus on reconciling computational predictions with experimental observations. Participation in Korea’s highest-level defense research planning has also given me a broader perspective on the relationship between scientific progress and international security, shaping my commitment to pursue research that creates meaningful value for society.",
+    tags: ["Thermal batteries", "DFT", "MD", "Machine learning", "FEM", "Experiment–simulation integration"],
   },
   {
-    period: "2024 — 2025",
-    role: "Research Intern",
-    group: "Energy Materials Group · Institute Placeholder",
-    copy: "Developed a finite-element workflow to study coupled heat transfer and electrochemical behavior in next-generation battery cells.",
-    tags: ["COMSOL", "Thermal analysis", "Batteries"],
+    period: "September 2023 — February 2024",
+    role: "Undergraduate Research Intern",
+    group: "Korea Institute of Science and Technology (KIST) · Advised by Dr. Seungho Yu",
+    copy: "Used first-principles calculations to evaluate the stability of sulfide solid electrolytes and design new compositions. Starting from the Li₆PS₅Cl parent composition, I systematically mapped changes in phase stability arising from isovalent substitution and site disorder, and identified the relationship between ionic radius and thermodynamic phase stability.",
+    tags: ["First-principles calculations", "Sulfide solid electrolytes", "Phase stability", "Materials design"],
   },
 ];
 
