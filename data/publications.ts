@@ -7,7 +7,7 @@ export type Publication = {
   href?: string;
   image: string;
   imageAlt: string;
-  abstract: string;
+  abstract?: string;
 };
 
 export const publications: Publication[] = [
@@ -96,4 +96,29 @@ export const preprints: Publication[] = [
   },
 ];
 
-export const manuscriptsInPreparation: Publication[] = [];
+export const manuscriptsInPreparation: Publication[] = [
+  {
+    title: "Finite Element Investigation of Thermal Stability for Thermal Batteries based on Low-Melting Electrolytes",
+    authors: "Sang-Hyeon Park, Hyunjin Won, Chae-Nam Im, Hye-Ryeon Yu, Jang-Hyeon Cho, and Jae-Seong Yeo*",
+    year: 2026,
+    status: "Manuscript in preparation",
+    image: "/publications/manuscript-thermal-stability-fem.png",
+    imageAlt: "Finite-element thermal model and simulated temperature distribution of a multilayer thermal battery",
+  },
+  {
+    title: "Theoretically investigated phase evolution of AFeF₃ (A = Li, Na) polymorphs demonstrated by simple mechanochemical synthesis",
+    authors: "Hyunjin Won†, and Sang-Hyeon Park†*",
+    year: 2026,
+    status: "Manuscript in preparation",
+    image: "/publications/manuscript-afef3-phase-evolution.png",
+    imageAlt: "Calculated formation energies of AFeF₃ polymorphs and comparison with a NaFeF₃ diffraction pattern",
+  },
+  {
+    title: "Collision Integrity Evaluation of Stacked Thermal Battery Cells: Pellet Compression Behavior and FEM Analysis",
+    authors: "Jaehun Kim†, Sang-Hyeon Park†, Heesook Roh, Sunghak Lee, Hyeong Seop Kim, and Tae-Young Ahn*",
+    year: 2026,
+    status: "Manuscript in preparation",
+    image: "/publications/manuscript-collision-integrity-fem.png",
+    imageAlt: "Finite-element impact simulation and deceleration response of stacked thermal battery cells",
+  },
+];
