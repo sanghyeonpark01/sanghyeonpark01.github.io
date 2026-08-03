@@ -91,12 +91,13 @@ export default function Home() {
       </section>
 
       <section className="section shell about-grid" id="about">
-        <div><p className="section-index">01 / ABOUT</p><h2>Curious about<br />what happens <em>between<br />the atoms.</em></h2></div>
+        <div><p className="section-index">01 / ABOUT</p><h2>From atomic-scale insight<br />to materials that<br /><em>work in practice.</em></h2></div>
         <div className="about-copy">
-          <p className="lead">My work lives at the intersection of physics, chemistry, and computation.</p>
-          <p>I use multiscale modeling to reveal how microscopic mechanisms govern macroscopic behavior in energy materials. I’m especially interested in solid-state batteries and the complex interfaces that determine their performance.</p>
-          <p>Currently preparing for PhD study in the United States, I hope to develop predictive tools that make materials discovery faster, more interpretable, and more sustainable.</p>
-          <dl><div><dt>Current focus</dt><dd>Solid-state battery interfaces</dd></div><div><dt>Based in</dt><dd>Seoul, South Korea</dd></div><div><dt>Open to</dt><dd>PhD opportunities · Fall 2027</dd></div></dl>
+          <p className="lead">My research connects computational materials science with experimentally relevant materials design.</p>
+          <p>I investigate how atomic-scale chemistry, interfacial reactions, and ion transport govern the performance of electrochemical energy-storage systems. Using first-principles calculations, molecular simulation, machine learning, and finite-element analysis, I study materials across scales—from solid–solid interfaces to full battery architectures.</p>
+          <p>At the Agency for Defense Development, I apply these approaches to the design of electrodes and solid electrolytes for high-voltage all-solid-state batteries and reserve thermal batteries. I am particularly interested in advancing computational methods while using their insights to guide experiments and establish quantitative agreement between prediction and observation.</p>
+          <p>As a prospective Ph.D. student, I hope to develop interpretable, physics-grounded computational frameworks that accelerate materials discovery and translate fundamental understanding into experimentally validated solutions.</p>
+          <dl><div><dt>Current questions</dt><dd>Interfacial stability · Ion transport · Computation-guided experiments</dd></div><div><dt>Methods</dt><dd>DFT · Molecular simulation · Machine learning · FEM</dd></div><div><dt>Current position</dt><dd>Research Officer and Researcher · Agency for Defense Development</dd></div><div><dt>Seeking</dt><dd>Ph.D. opportunities · Fall 2027</dd></div></dl>
         </div>
       </section>
 
