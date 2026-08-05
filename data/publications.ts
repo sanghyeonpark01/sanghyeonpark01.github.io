@@ -68,8 +68,9 @@ export const preprints: Publication[] = [
   {
     title: "Stabilizing Interfaces in Magnesium Solid-State Batteries via High-throughput Coating Design",
     authors: "Sang-Hyeon Park*, Changseong Youn, June-Ho Lim, Gyeongbeom Kim, Yusong Choi, Hyun-Ki Yoon, and Jongseo Lee*",
+    venue: "Small Methods",
     year: 2026,
-    status: "Under review",
+    status: "Under revision",
     image: "/publications/preprint-park-magnesium-interfaces.png",
     imageAlt: "Electrochemical stability windows of representative magnesium solid electrolytes",
     abstract: "To meet the growing demand for affordable and safe electrochemical energy storage systems with high energy density, all-solid-state magnesium-ion batteries (ASSMBs) have emerged as promising candidates, because magnesium is naturally abundant and offers high volumetric capacity. However, the electrochemical stability of magnesium solid electrolytes (SEs), as well as their chemical compatibility with magnesium cathode materials, remains insufficiently investigated. Herein, we assess the electrochemical stability window (ESW) of magnesium SEs and evaluate their interfacial reactivity with magnesium cathodes by calculating the decomposition energy for SE–cathode pairs. The results show that the mismatch between the ESW of magnesium SEs and cathode requirements should be addressed, underscoring the need for protective strategies. Accordingly, a high-throughput screening for relevant coating materials is conducted, identifying 14 experimentally observed materials from 19,098 magnesium-containing inorganic compounds. These coating materials are further evaluated by computing their migration barriers for magnesium-ion hopping, excluding an additional seven compounds with exceptionally high vacancy-diffusion barriers. This work provides fundamental insights into magnesium solid electrolytes and their interfacial stability and establishes a rational design framework to enhance overall cell performance in ASSMBs.",
