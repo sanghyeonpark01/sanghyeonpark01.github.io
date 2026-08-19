@@ -28,13 +28,16 @@ pnpm build
 pnpm start
 ```
 
+To verify the static GitHub Pages build:
+
+```bash
+pnpm build:pages
+```
+
 ## Deployment
 
-The project includes Sites/Cloudflare deployment configuration in `.openai/hosting.json`. It can also be deployed to any platform that supports Next.js:
+The project includes Sites/Cloudflare deployment configuration in `.openai/hosting.json`. It also includes a GitHub Actions workflow that publishes a static export to GitHub Pages whenever `main` is updated.
 
-1. Push the repository to a Git provider.
-2. Import it into your hosting provider.
-3. Use `pnpm build` as the build command.
-4. No environment variables or database setup are required.
+For GitHub Pages, open the repository's **Settings → Pages** and select **GitHub Actions** as the source. No environment variables or database setup are required.
 
 Before going live, replace all remaining placeholder profile content.
