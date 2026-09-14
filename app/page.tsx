@@ -131,7 +131,7 @@ export default function Home() {
         </div></div>
       </section>
 
-      <section className="cv-band"><div className="shell"><p className="section-index">05 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated July 2026</p></div></section>
+      <section className="cv-band"><div className="shell"><p className="section-index">05 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated September 2026</p></div></section>
 
       <section className="section section-tint" id="activities"><div className="shell"><p className="section-index">06 / OTHER ACTIVITIES</p><h2>Life beyond<br /><em>research.</em></h2></div></section>
 
