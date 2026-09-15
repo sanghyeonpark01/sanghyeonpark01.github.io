@@ -1,15 +1,5 @@
 import { conferencePresentations, manuscriptsInPreparation, preprints, publications, type Publication } from "@/data/publications";
 
-const interests = [
-  ["01", "Computational materials science", "Connecting atomistic mechanisms with continuum-scale performance."],
-  ["02", "Solid-state batteries", "Designing safer, high-energy storage through predictive simulation."],
-  ["03", "Electrochemical interfaces", "Understanding transport, stability, and reaction pathways at buried interfaces."],
-  ["04", "Machine learning for materials", "Accelerating screening and extracting physical insight from complex data."],
-  ["05", "Density functional theory", "Resolving electronic structure and thermodynamic stability from first principles."],
-  ["06", "Molecular dynamics", "Following dynamical processes across time and temperature scales."],
-  ["07", "Finite-element thermal analysis", "Modeling heat generation and transport in electrochemical devices."],
-];
-
 const experience = [
   {
     period: "June 2024 — Present",
@@ -48,10 +38,8 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#publications">Selected Work</a>
-          <a href="#research">Interests</a>
           <a href="#experience">Experience</a>
         </nav>
-        <a className="contact-link" href="#contact">Get in touch <Arrow /></a>
       </header>
 
       <section className="hero shell" id="top">
@@ -115,27 +103,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-tint" id="research">
-        <div className="shell">
-          <div className="section-heading"><div><p className="section-index">03 / RESEARCH INTERESTS</p><h2>Questions I’m<br /><em>driven to answer.</em></h2></div><p>From electrons to engineered systems, I combine physics-based simulation with data-driven methods.</p></div>
-          <div className="interest-grid">
-            {interests.map(([number, title, copy]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}
-          </div>
-        </div>
-      </section>
-
       <section className="section shell" id="experience">
-        <p className="section-index">04 / RESEARCH EXPERIENCE</p>
+        <p className="section-index">03 / RESEARCH EXPERIENCE</p>
         <div className="experience-layout"><h2>Learning by<br /><em>doing the work.</em></h2><div className="timeline">
           {experience.map((item) => <article key={item.period}><time>{item.period}</time><div><h3>{item.role}</h3><h4>{item.group}</h4><p>{item.copy}</p><ul>{item.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div></article>)}
         </div></div>
       </section>
 
-      <section className="cv-band"><div className="shell"><p className="section-index">05 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated September 2026</p></div></section>
+      <section className="cv-band"><div className="shell"><p className="section-index">04 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated September 2026</p></div></section>
 
-      <section className="section section-tint" id="activities"><div className="shell"><p className="section-index">06 / OTHER ACTIVITIES</p><h2>Life beyond<br /><em>research.</em></h2></div></section>
-
-      <footer id="contact"><div className="shell footer-main"><p className="section-index">08 / CONTACT</p><div><h2>Let’s explore what<br />we can <em>discover.</em></h2><p>I’m always glad to discuss research ideas, potential collaborations, and PhD opportunities.</p><a className="email" href="mailto:ghbond010126@gmail.com">ghbond010126@gmail.com <Arrow /></a></div><div className="socials"><a href="https://scholar.google.com/citations?user=5et0cHcAAAAJ&hl=ko" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div></div><div className="shell footer-bottom"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
+      <footer className="minimal-footer"><div className="shell"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
     </main>
   );
 }

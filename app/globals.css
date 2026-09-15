@@ -83,3 +83,10 @@ code{font-size:.92em;background:rgba(255,255,255,.09);padding:2px 4px}
 .conference-list p{margin:0;color:#aabbb7;font-size:12px;line-height:1.55}
 .conference-list .conference-kind{color:var(--lime);font-size:10px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}
 @media (max-width:620px){.conference-list article{grid-template-columns:32px 1fr;gap:12px;padding:25px 0}.conference-list h4{font-size:21px}}
+
+/* Compact footer used after removing the standalone contact section. */
+.minimal-footer{padding:24px 0;background:#092d29;color:#79948e}
+.minimal-footer .shell{display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:9px;letter-spacing:.08em}
+.minimal-footer p{margin:0}
+.minimal-footer a{color:#eef5ef}
+@media (max-width:620px){.minimal-footer .shell{align-items:flex-start;flex-direction:column;gap:10px}}
