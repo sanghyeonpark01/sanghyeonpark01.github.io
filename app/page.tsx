@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Sang-Hyeon Park, home">SHP<span>.</span></a>
+        <a className="wordmark" href="#top" aria-label="Sang-Hyeon Park, home">Sang-Hyeon Park</a>
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#publications">Publications</a>
@@ -54,7 +54,7 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <div className="hero-heading">
-          <p className="eyebrow"><span /> <a href="mailto:ghbond010126@gmail.com">ghbond010126@gmail.com</a></p>
+          <p className="eyebrow"><span /> <a href="mailto:sanghyeonpark0126@gmail.com">sanghyeonpark0126@gmail.com</a></p>
           <h1>Sang-Hyeon Park</h1>
           <p>Prospective Ph.D. Applicant · Research Officer at Agency for Defense Development</p>
         </div>
@@ -72,7 +72,7 @@ export default function Home() {
             <div className="profile-photo-wrap"><img src="/sang-hyeon-park-profile.jpeg" alt="Portrait of Sang-Hyeon Park" /></div>
             <div className="profile-links">
               <a href="https://scholar.google.com/citations?user=5et0cHcAAAAJ&hl=ko" target="_blank" rel="noreferrer">Google Scholar <Arrow /></a>
-              <a href="mailto:ghbond010126@gmail.com">Email <Arrow /></a>
+              <a href="mailto:sanghyeonpark0126@gmail.com">Email <Arrow /></a>
               <a href="/cv-sang-hyeon-park.pdf" download>CV <span aria-hidden="true">↓</span></a>
             </div>
           </aside>
