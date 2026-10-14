@@ -26,8 +26,18 @@ function HighlightedAuthors({ authors }: { authors: string }) {
   return <>{parts.map((part, index) => <span key={`${part}-${index}`}>{part}{index < parts.length - 1 && <mark className="author-highlight">Sang-Hyeon Park</mark>}</span>)}</>;
 }
 
-function PublicationList({ items }: { items: Publication[] }) {
-  return <div className="publication-list">{items.map((pub, index) => <article key={pub.title}><span>{String(index + 1).padStart(2, "0")}</span><div className="publication-image"><img src={pub.image} alt={pub.imageAlt} /></div><div><p className="pub-meta">{pub.status} · {pub.year}</p><h3>{pub.title}</h3><p><HighlightedAuthors authors={pub.authors} /></p>{pub.venue && <p className="venue">{pub.venue}</p>}{pub.abstract && <details className="publication-abstract"><summary><span className="summary-open">See abstract</span><span className="summary-close">Close abstract</span></summary><p>{pub.abstract}</p></details>}</div>{pub.href ? <a href={pub.href} target="_blank" rel="noreferrer" aria-label={`View ${pub.title}`}><Arrow /></a> : <span className="publication-action-placeholder" aria-hidden="true" />}</article>)}</div>;
+function PublicationList({ items, startIndex, showAbstracts = false }: { items: Publication[]; startIndex: number; showAbstracts?: boolean }) {
+  return <div className="publication-list">{items.map((pub, index) => <article key={pub.title}>
+    <span className="publication-number">J{startIndex + index}</span>
+    <div className="publication-copy">
+      <p className="pub-meta">{pub.status} · {pub.year}</p>
+      <h3>{pub.href ? <a className="publication-title-link" href={pub.href} target="_blank" rel="noreferrer">{pub.title} <Arrow /></a> : pub.title}</h3>
+      <p className="publication-authors"><HighlightedAuthors authors={pub.authors} /></p>
+      {pub.venue && <p className="venue">{pub.venue} ({pub.year}).</p>}
+      {pub.note && <p className="publication-note">{pub.note}</p>}
+      {showAbstracts && pub.abstract && <details className="publication-abstract"><summary><span className="summary-open">See abstract</span><span className="summary-close">Close abstract</span></summary><p>{pub.abstract}</p></details>}
+    </div>
+  </article>)}</div>;
 }
 
 export default function Home() {
@@ -37,7 +47,7 @@ export default function Home() {
         <a className="wordmark" href="#top" aria-label="Sang-Hyeon Park, home">SHP<span>.</span></a>
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#publications">Selected Work</a>
+          <a href="#publications">Publications</a>
           <a href="#experience">Experience</a>
         </nav>
       </header>
@@ -83,10 +93,10 @@ export default function Home() {
 
       <section className="section publication-section" id="publications">
         <div className="shell">
-          <div className="section-heading light"><div><p className="section-index">02 / SELECTED WORK</p><h2>Selected <em>work.</em></h2></div><div className="publication-intro"><p>Published work and ongoing research on computational materials design and next-generation battery materials.</p><p className="author-legend"><span>† Equal contribution</span><span>* Corresponding author</span></p></div></div>
-          <section className="publication-group" aria-labelledby="published-heading"><h3 id="published-heading">2.1. Publications</h3><PublicationList items={publications} /></section>
-          <section className="publication-group" aria-labelledby="preprints-heading"><h3 id="preprints-heading">2.2. Preprints under review</h3><PublicationList items={preprints} /></section>
-          <section className="publication-group" aria-labelledby="manuscripts-heading"><h3 id="manuscripts-heading">2.3. Manuscript in preparation</h3>{manuscriptsInPreparation.length > 0 ? <PublicationList items={manuscriptsInPreparation} /> : <p className="publication-empty">Details forthcoming.</p>}</section>
+          <div className="section-heading light"><div><p className="section-index">02 / PUBLICATIONS</p><h2>Publications<em>.</em></h2></div><div className="publication-intro"><p>Peer-reviewed publications and ongoing manuscripts in computational materials science, battery interfaces, and thermal-energy systems.</p><p className="abstract-legend">Abstracts are available for peer-reviewed publications.</p><p className="author-legend"><span>† Equal contribution</span><span>* Corresponding author</span></p></div></div>
+          <section className="publication-group" aria-labelledby="published-heading"><h3 id="published-heading">2.1. Peer-reviewed publications <span>({publications.length})</span></h3><PublicationList items={publications} startIndex={1} showAbstracts /></section>
+          <section className="publication-group" aria-labelledby="preprints-heading"><h3 id="preprints-heading">2.2. Preprints under review <span>({preprints.length})</span></h3><PublicationList items={preprints} startIndex={publications.length + 1} /></section>
+          <section className="publication-group" aria-labelledby="manuscripts-heading"><h3 id="manuscripts-heading">2.3. Manuscripts in preparation <span>({manuscriptsInPreparation.length})</span></h3>{manuscriptsInPreparation.length > 0 ? <PublicationList items={manuscriptsInPreparation} startIndex={publications.length + preprints.length + 1} /> : <p className="publication-empty">Details forthcoming.</p>}</section>
           <section className="publication-group" aria-labelledby="conference-heading">
             <h3 id="conference-heading">2.4. Conference presentations</h3>
             <div className="conference-list">
