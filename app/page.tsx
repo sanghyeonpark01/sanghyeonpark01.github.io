@@ -110,7 +110,7 @@ export default function Home() {
         </div></div>
       </section>
 
-      <section className="cv-band"><div className="shell"><p className="section-index">04 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 3 pages<br />Last updated September 2026</p></div></section>
+      <section className="cv-band"><div className="shell"><p className="section-index">04 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 2 pages<br />Last updated October 2026</p></div></section>
 
       <footer className="minimal-footer"><div className="shell"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
     </main>
