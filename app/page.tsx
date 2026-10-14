@@ -80,15 +80,27 @@ export default function Home() {
         <div className="scroll-cue"><span /> Scroll to discover</div>
       </section>
 
-      <section className="section shell about-grid" id="about">
-        <div><p className="section-index">01 / ABOUT</p><h2>From atomic-scale insight<br />to materials that<br /><em>work in practice.</em></h2></div>
-        <div className="about-copy">
-          <p className="lead">My research connects computational materials science with experimentally relevant materials design.</p>
-          <p>I investigate how atomic-scale chemistry, interfacial reactions, and ion transport govern the performance of electrochemical energy-storage systems. Using first-principles calculations, molecular simulation, machine learning, and finite-element analysis, I study materials across scales—from solid–solid interfaces to full battery architectures.</p>
-          <p>At the Agency for Defense Development, I apply these approaches to the design of electrodes and solid electrolytes for high-voltage all-solid-state batteries and reserve thermal batteries. I am particularly interested in advancing computational methods while using their insights to guide experiments and establish quantitative agreement between prediction and observation.</p>
-          <p>As a prospective Ph.D. student, I hope to develop interpretable, physics-grounded computational frameworks that accelerate materials discovery and translate fundamental understanding into experimentally validated solutions.</p>
-          <dl><div><dt>Current questions</dt><dd>Interfacial stability · Ion transport · Computation-guided experiments</dd></div><div><dt>Methods</dt><dd>DFT · Machine learning · FEM · Solid-state synthesis · Electrochemical characterizations</dd></div><div><dt>Current position</dt><dd>Research Officer for National Defense · Republic of Korea Army First Lieutenant · Agency for Defense Development, Daejeon, South Korea</dd></div><div><dt>Seeking</dt><dd>Ph.D. opportunities · Fall 2027</dd></div></dl>
+      <section className="section shell about-section" id="about">
+        <div className="about-grid">
+          <div><p className="section-index">01 / ABOUT</p><h2>From atomic-scale insight<br />to materials that<br /><em>work in practice.</em></h2></div>
+          <div className="about-copy">
+            <p className="lead">My research connects computational materials science with experimentally relevant materials design.</p>
+            <p>I investigate how atomic-scale chemistry, interfacial reactions, and ion transport govern the performance of electrochemical energy-storage systems. Using first-principles calculations, molecular simulation, machine learning, and finite-element analysis, I study materials across scales—from solid–solid interfaces to full battery architectures.</p>
+            <p>At the Agency for Defense Development, I apply these approaches to the design of electrodes and solid electrolytes for high-voltage all-solid-state batteries and reserve thermal batteries. I am particularly interested in advancing computational methods while using their insights to guide experiments and establish quantitative agreement between prediction and observation.</p>
+            <p>As a prospective Ph.D. student, I hope to develop interpretable, physics-grounded computational frameworks that accelerate materials discovery and translate fundamental understanding into experimentally validated solutions.</p>
+            <dl><div><dt>Current questions</dt><dd>Interfacial stability · Ion transport · Computation-guided experiments</dd></div><div><dt>Methods</dt><dd>DFT · Machine learning · FEM · Solid-state synthesis · Electrochemical characterizations</dd></div><div><dt>Current position</dt><dd>Research Officer for National Defense · Republic of Korea Army First Lieutenant · Agency for Defense Development, Daejeon, South Korea</dd></div><div><dt>Seeking</dt><dd>Ph.D. opportunities · Fall 2027</dd></div></dl>
+          </div>
         </div>
+        <figure className="research-map">
+          <figcaption className="research-map-heading">
+            <div><p>Research trajectory · 2023–2027</p><h3>From atomistic insight to experimentally grounded materials design.</h3></div>
+            <p>This map connects my research training, current work, and doctoral vision across atomistic modeling, data-driven discovery, electrochemical experiments, and device-scale analysis.</p>
+          </figcaption>
+          <a className="research-map-preview" href="/research-trajectory.svg" target="_blank" rel="noreferrer" aria-label="Open the full-resolution research trajectory figure in a new tab">
+            <img src="/research-trajectory.webp" alt="Research trajectory from a KIST internship in sulfide solid electrolytes through computational and experimental battery research at ADD toward doctoral study in Fall 2027" />
+            <span>Open full-resolution figure <Arrow /></span>
+          </a>
+        </figure>
       </section>
 
       <section className="section publication-section" id="publications">
