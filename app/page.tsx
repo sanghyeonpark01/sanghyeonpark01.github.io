@@ -7,6 +7,30 @@ const experience = [
     group: "Agency for Defense Development (ADD) · Daejeon, South Korea",
     copy: "Selected as a Research Officer for National Defense after graduation, I have fulfilled my military service by contributing to the development of defense energy materials. My primary work supports the research and development of reserve thermal batteries for military energy storage and power systems, including the conceptual design and experimental validation of high-voltage, low-melting-point thermal batteries. In parallel, I have independently expanded my expertise beyond energy-materials experiments by developing proficiency in DFT, molecular dynamics, machine learning, and finite-element modeling, with a continuing focus on reconciling computational predictions with experimental observations. Participation in Korea’s highest-level defense research planning has also given me a broader perspective on the relationship between scientific progress and international security, shaping my commitment to pursue research that creates meaningful value for society.",
     tags: ["Thermal batteries", "DFT", "MD", "Machine learning", "FEM", "Experiment–simulation integration"],
+    details: [
+      {
+        title: "Computational materials science for energy-storage materials",
+        items: [
+          "Investigated the influence of 3d transition-metal substituents on the FeF₃ lattice as a function of lithiation level [J1, C2].",
+          "Optimized Ta- and Ga-doped cubic LLZO structures to analyze interfacial reactivity with Li₁₃Si₄ anode materials [J4].",
+          "Evaluated interfacial reactivity for 40,000 cathode–coating pairs and developed interpretable machine-learning models for stability prediction [J2, C1].",
+          "Identified stabilizing Mg-containing coating materials by integrating thermodynamic screening with NEB calculations [J3, C1].",
+          "Compared the stability of NaFeF₃ polymorphs against conversion phases and solid-state-synthesized Pnma-NaFeF₃ [J10].",
+          "Investigated F-substituted FeS₂ and identified phase separation into FeS₂ | FeF₂, consistent with experimental observations [J8].",
+        ],
+      },
+      {
+        title: "Research in military energy-storage systems",
+        items: [
+          "Fabricated FeS₂ cathode, eutectic-salt (LiCl–KCl), and solid-electrolyte pellets for reserve thermal batteries [P1].",
+          "Built a powder atomic-layer-deposition system for cathode materials to suppress parasitic reactions with molten salt [P1].",
+          "Measured and fitted Nyquist plots for Li-ion-conducting garnets and proton-conducting liquid crystals [J4, J6, J12].",
+          "Adjusted the surface properties of Ta-LLZO solid electrolytes by acid etching to improve thermal-battery discharge performance [J6].",
+          "Developed a finite-element analysis model to study the thermal stability of a device-level thermal battery [J11, C1].",
+          "Measured mechanical properties of thermal-battery components for finite-element simulations of projectile gas-gun tests [J5, J9].",
+        ],
+      },
+    ],
   },
   {
     period: "September 2023 — February 2024",
@@ -14,6 +38,15 @@ const experience = [
     group: "Korea Institute of Science and Technology (KIST) · Advised by Dr. Seungho Yu",
     copy: "Used first-principles calculations to evaluate the stability of sulfide solid electrolytes and design new compositions. Starting from the Li₆PS₅Cl parent composition, I systematically mapped changes in phase stability arising from isovalent substitution and site disorder, and identified the relationship between ionic radius and thermodynamic phase stability.",
     tags: ["First-principles calculations", "Sulfide solid electrolytes", "Phase stability", "Materials design"],
+    details: [
+      {
+        title: "Computational design of sulfide solid electrolytes",
+        items: [
+          "Proposed the effects of isovalent dopants on the phase stability of Li₆PS₅Cl argyrodite through density-functional-theory calculations.",
+          "Conducted ab initio molecular dynamics to study diffusion in argyrodites with varying dopants and antisite-defect concentrations.",
+        ],
+      },
+    ],
   },
 ];
 
@@ -138,7 +171,7 @@ export default function Home() {
       <section className="section shell" id="experience">
         <p className="section-index">03 / RESEARCH EXPERIENCE</p>
         <div className="experience-layout"><h2>Learning by<br /><em>doing the work.</em></h2><div className="timeline">
-          {experience.map((item) => <article key={item.period}><time>{item.period}</time><div><h3>{item.role}</h3><h4>{item.group}</h4><p>{item.copy}</p><ul>{item.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div></article>)}
+          {experience.map((item) => <article key={item.period}><time>{item.period}</time><div><h3>{item.role}</h3><h4>{item.group}</h4><p>{item.copy}</p><ul>{item.tags.map(tag => <li key={tag}>{tag}</li>)}</ul><details className="experience-details"><summary><span className="summary-open">See details</span><span className="summary-close">Close details</span></summary><div className="experience-details-body">{item.details.map((group) => <section key={group.title}><h5>{group.title}</h5><ul>{group.items.map((detail) => <li key={detail}>{detail}</li>)}</ul></section>)}</div></details></div></article>)}
         </div></div>
       </section>
 
