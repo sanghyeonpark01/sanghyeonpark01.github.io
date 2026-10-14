@@ -101,6 +101,16 @@ export default function Home() {
             <span>Open full-resolution figure <Arrow /></span>
           </a>
         </figure>
+        <figure className="research-map research-vision">
+          <figcaption className="research-map-heading">
+            <div><p>Research vision · Ph.D. and beyond</p><h3>Computational foundations that connect mechanism, prediction, and materials design.</h3></div>
+            <p>My long-term vision is to combine electronic-structure theory, atomistic dynamics, statistical mechanics, and data-driven methods to explain functional materials and translate that understanding into predictive synthesis, stable interfaces, and inverse design.</p>
+          </figcaption>
+          <a className="research-map-preview" href="/research-vision.svg" target="_blank" rel="noreferrer" aria-label="Open the full-resolution research vision figure in a new tab">
+            <img src="/research-vision.webp" alt="Research vision connecting electronic-level calculations, atomistic dynamics, and machine learning with finite-temperature and charge-transport questions and materials design outcomes" />
+            <span>Open full-resolution figure <Arrow /></span>
+          </a>
+        </figure>
       </section>
 
       <section className="section publication-section" id="publications">
