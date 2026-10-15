@@ -50,23 +50,7 @@ const experience = [
   },
 ];
 
-const beyondMoments = [
-  {
-    title: "Community & leadership",
-    caption: "Clubs, student leadership, and the communities that shaped me.",
-    image: "",
-  },
-  {
-    title: "People & exchange",
-    caption: "Conversations, collaborations, and moments of connection beyond the lab.",
-    image: "",
-  },
-  {
-    title: "Life outside the lab",
-    caption: "The interests and everyday experiences that keep me curious.",
-    image: "",
-  },
-];
+const beyondPhotos = ["", "", ""];
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -198,14 +182,13 @@ export default function Home() {
         <div className="shell">
           <div className="beyond-heading">
             <div><p className="section-index">04 / BEYOND THE RESEARCH</p><h2>Beyond<br />the research<em>.</em></h2></div>
-            <p>Research is only one part of who I am. This space will collect the communities, conversations, and interests that shape how I work with people and see the world.</p>
+            <p>Selected moments outside the lab.</p>
           </div>
           <div className="beyond-gallery">
-            {beyondMoments.map((moment, index) => <figure key={moment.title}>
+            {beyondPhotos.map((image, index) => <figure key={index}>
               <div className="beyond-photo">
-                {moment.image ? <img src={moment.image} alt={moment.title} /> : <div className="beyond-photo-placeholder" aria-label={`${moment.title} photo placeholder`}><span>{String(index + 1).padStart(2, "0")}</span><strong>Photo<br />coming soon</strong></div>}
+                {image ? <img src={image} alt={`Life beyond research ${index + 1}`} /> : <div className="beyond-photo-placeholder" aria-label={`Photo placeholder ${index + 1}`}><span>{String(index + 1).padStart(2, "0")}</span></div>}
               </div>
-              <figcaption><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{moment.title}</h3><p>{moment.caption}</p></div></figcaption>
             </figure>)}
           </div>
         </div>
