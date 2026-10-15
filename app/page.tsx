@@ -50,6 +50,24 @@ const experience = [
   },
 ];
 
+const beyondMoments = [
+  {
+    title: "Community & leadership",
+    caption: "Clubs, student leadership, and the communities that shaped me.",
+    image: "",
+  },
+  {
+    title: "People & exchange",
+    caption: "Conversations, collaborations, and moments of connection beyond the lab.",
+    image: "",
+  },
+  {
+    title: "Life outside the lab",
+    caption: "The interests and everyday experiences that keep me curious.",
+    image: "",
+  },
+];
+
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -82,6 +100,7 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#publications">Publications</a>
           <a href="#experience">Experience</a>
+          <a href="#beyond">Beyond</a>
         </nav>
       </header>
 
@@ -175,7 +194,22 @@ export default function Home() {
         </div></div>
       </section>
 
-      <section className="cv-band"><div className="shell"><p className="section-index">04 / CURRICULUM VITAE</p><div><h2>Education, experience,<br />and the <em>full story.</em></h2><a className="button button-light" href="/cv-sang-hyeon-park.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div><p className="cv-note">PDF · 2 pages<br />Last updated October 2026</p></div></section>
+      <section className="section beyond-section" id="beyond">
+        <div className="shell">
+          <div className="beyond-heading">
+            <div><p className="section-index">04 / BEYOND THE RESEARCH</p><h2>Beyond<br />the research<em>.</em></h2></div>
+            <p>Research is only one part of who I am. This space will collect the communities, conversations, and interests that shape how I work with people and see the world.</p>
+          </div>
+          <div className="beyond-gallery">
+            {beyondMoments.map((moment, index) => <figure key={moment.title}>
+              <div className="beyond-photo">
+                {moment.image ? <img src={moment.image} alt={moment.title} /> : <div className="beyond-photo-placeholder" aria-label={`${moment.title} photo placeholder`}><span>{String(index + 1).padStart(2, "0")}</span><strong>Photo<br />coming soon</strong></div>}
+              </div>
+              <figcaption><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{moment.title}</h3><p>{moment.caption}</p></div></figcaption>
+            </figure>)}
+          </div>
+        </div>
+      </section>
 
       <footer className="minimal-footer"><div className="shell"><p>© 2026 Sang-Hyeon Park</p><p>Computational materials science · Seoul, KR</p><a href="#top">Back to top ↑</a></div></footer>
     </main>
