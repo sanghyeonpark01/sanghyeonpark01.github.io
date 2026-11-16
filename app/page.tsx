@@ -50,7 +50,19 @@ const experience = [
   },
 ];
 
-const beyondPhotos = ["", "", ""];
+const beyondPhotos = [
+  { src: "/beyond/fishing-1.webp", alt: "Fishing at sunset", portrait: true },
+  { src: "/beyond/jeju-3.webp", alt: "Walking along the coast of Jeju", portrait: false },
+  { src: "/beyond/korea-1.webp", alt: "A sunny day at a Korean palace", portrait: false },
+  { src: "/beyond/paris-1.webp", alt: "Visiting the Eiffel Tower in Paris", portrait: true },
+  { src: "/beyond/jeju-1.webp", alt: "A seaside moment in Jeju", portrait: true },
+  { src: "/beyond/sapporo-1.webp", alt: "Winter travel in Sapporo", portrait: true },
+  { src: "/beyond/korea-2.webp", alt: "Autumn foliage in Korea", portrait: true },
+  { src: "/beyond/fishing-2.webp", alt: "A memorable catch on a fishing trip", portrait: true },
+  { src: "/beyond/paris-2.webp", alt: "Exploring Paris", portrait: true },
+  { src: "/beyond/jeju-2.webp", alt: "Exploring the rocky coast of Jeju", portrait: true },
+  { src: "/beyond/fishing-3.webp", alt: "Standing by the sea on a fishing trip", portrait: true },
+];
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -182,15 +194,18 @@ export default function Home() {
         <div className="shell">
           <div className="beyond-heading">
             <div><p className="section-index">04 / BEYOND THE RESEARCH</p><h2>Beyond<br />the research<em>.</em></h2></div>
-            <p>Selected moments outside the lab.</p>
+            <p><strong>{beyondPhotos.length} moments</strong> · Scroll to explore</p>
           </div>
-          <div className="beyond-gallery">
-            {beyondPhotos.map((image, index) => <figure key={index}>
-              <div className="beyond-photo">
-                {image ? <img src={image} alt={`Life beyond research ${index + 1}`} /> : <div className="beyond-photo-placeholder" aria-label={`Photo placeholder ${index + 1}`}><span>{String(index + 1).padStart(2, "0")}</span></div>}
-              </div>
-            </figure>)}
+          <div className="beyond-rail" aria-label="Selected moments outside the lab">
+            {beyondPhotos.map((photo, index) => <a className={`beyond-frame ${photo.portrait ? "is-portrait" : "is-landscape"}`} href={`#beyond-photo-${index + 1}`} key={photo.src} aria-label={`Open photo ${index + 1} of ${beyondPhotos.length}`}>
+              <img src={photo.src} alt={photo.alt} loading="lazy" />
+              <span>{String(index + 1).padStart(2, "0")}</span>
+            </a>)}
           </div>
+          {beyondPhotos.map((photo, index) => <div className="beyond-lightbox" id={`beyond-photo-${index + 1}`} key={`lightbox-${photo.src}`}>
+            <a className="beyond-lightbox-backdrop" href="#beyond" aria-label="Close photo" />
+            <figure><img src={photo.src} alt={photo.alt} /><a href="#beyond" aria-label="Close photo">Close <span aria-hidden="true">×</span></a><figcaption>{String(index + 1).padStart(2, "0")} / {String(beyondPhotos.length).padStart(2, "0")}</figcaption></figure>
+          </div>)}
         </div>
       </section>
 
